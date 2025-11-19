@@ -1,0 +1,146 @@
+:root {
+    --green-1: #2f9e44;
+    --green-2: #8fd46b;
+    --blue-1: #9ad3ff;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', system-ui, sans-serif;
+    background: var(--white);
+    color: #013;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#bg-svg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+.header {
+    padding: 28px 24px 6px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.header h1 {
+    font-family: 'Fredoka One', sans-serif;
+    margin: 0;
+    color: var(--green-1);
+    font-size: 36px
+}
+
+.header .tag {
+    margin: 6px 0 0 0;
+    color: #034;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6)
+}
+
+.playerWrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px
+}
+
+.videoContainer {
+    width: min(1100px, 95%);
+    max-width: 1200px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(3, 20, 12, 0.12);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+    position: relative
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000
+}
+
+.controls {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    display: flex;
+    gap: 8px
+}
+
+.controls button {
+    background: var(--green-1);
+    border: none;
+    color: var(--white);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(15, 80, 25, 0.12)
+}
+
+.controls button:hover {
+    transform: translateY(-2px)
+}
+
+.overlayBrand {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 8px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.overlayBrand .goatIcon {
+    font-size: 22px
+}
+
+.overlayBrand div {
+    font-weight: 600;
+    color: #053
+}
+
+.footer {
+    padding: 18px 24px;
+    text-align: center;
+    color: #045
+}
+
+/* Responsive tweaks */
+@media (max-width:640px) {
+    .header h1 {
+        font-size: 26px
+    }
+
+    .controls button {
+        padding: 8px 10px;
+        font-size: 14px
+    }
+}

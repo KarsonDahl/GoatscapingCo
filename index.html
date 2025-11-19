@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Goatscaping Co. — Live Pasture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background SVG: polygonal pasture with silhouettes -->
+    <svg id="bg-svg" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900"
+        aria-hidden="true">
+        <!-- sky polygons -->
+        <polygon points="0,0 1600,0 1600,300 0,240" fill="#9ad3ff" />
+        <polygon points="0,240 1600,300 1600,420 0,360" fill="#7ec8ff" />
+        <!-- pasture polygons -->
+        <polygon points="0,360 1600,420 1600,900 0,900" fill="#b8e6b0" />
+        <polygon points="0,420 1600,480 1600,900 0,900" fill="#98d46b" opacity="0.9" />
+
+        <!-- stylized goat silhouettes (simple shapes) -->
+        <g transform="translate(120,540) scale(1.2)">
+            <rect x="0" y="-30" width="120" height="50" rx="18" fill="#0b3" />
+            <polygon points="-10,-40 20,-40 40,-70 18,-70" fill="#081" />
+            <rect x="10" y="10" width="10" height="30" fill="#031" />
+            <rect x="40" y="10" width="10" height="30" fill="#031" />
+        </g>
+
+        <g transform="translate(420,600) scale(0.9)" fill="#123">
+            <rect x="0" y="-24" width="140" height="44" rx="14" />
+            <polygon points="-20,-30 8,-30 36,-60 10,-64" />
+            <rect x="22" y="12" width="8" height="30" />
+            <rect x="70" y="12" width="8" height="30" />
+        </g>
+
+        <g transform="translate(1100,560) scale(1.1)" fill="#013">
+            <rect x="0" y="-26" width="110" height="44" rx="16" />
+            <polygon points="-10,-38 14,-38 34,-66 10,-68" />
+            <rect x="12" y="10" width="9" height="28" />
+            <rect x="56" y="10" width="9" height="28" />
+        </g>
+
+        <!-- faint hill polygons for depth -->
+        <polygon points="0,620 350,520 700,620 1050,540 1600,620 1600,900 0,900" fill="#7ebf59" opacity="0.35" />
+    </svg>
+
+    <div id="root"></div>
+
+    <!-- React + Babel (CDN) for a small static app -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="app.js"></script>
+</body>
+
+</html>
